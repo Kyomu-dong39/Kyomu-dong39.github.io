@@ -8,16 +8,16 @@
 
     <meta name="keywords" content="Kyomu夜月,tech,life" />
     <link rel="canonical" href="https://kyomu-dong39.github.io/project/about/" />
-    <meta name="description" content="你好欢迎来到Kyomu夜月的博客!">
+    <meta name="description" content="你好，欢迎来到Kyomu夜月的博客!">
 <meta property="og:type" content="website">
 <meta property="og:title" content="about">
 <meta property="og:url" content="https://kyomu-dong39.github.io/project/about/">
 <meta property="og:site_name" content="Kyomu夜月的博客">
-<meta property="og:description" content="你好欢迎来到Kyomu夜月的博客!">
+<meta property="og:description" content="你好，欢迎来到Kyomu夜月的博客!">
 <meta property="og:locale" content="ch_ZN">
 <meta property="og:image" content="https://kyomu-dong39.github.io/project/project/images/avatar.gif">
 <meta property="article:published_time" content="2026-06-17T09:29:44.000Z">
-<meta property="article:modified_time" content="2026-06-18T04:57:11.995Z">
+<meta property="article:modified_time" content="2026-06-19T06:41:43.541Z">
 <meta property="article:author" content="Kyomu夜月">
 <meta property="article:tag" content="Kyomu夜月,tech,life">
 <meta name="twitter:card" content="summary_large_image">
@@ -57,6 +57,9 @@
 
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.css" />
+
 
 
 
@@ -65,6 +68,8 @@
 <script src="/project/js/lib/stars.js"></script>
 
 <link rel="stylesheet" href="/project/css/main.css" />
+
+    
 
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body>
@@ -173,7 +178,7 @@
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             
-<div class="article" data-category="" style="--tx-post-bg:#fffdfa;--tx-post-text:#1e3e3f;--tx-cat-bg:#eef2f7;--tx-cat-text:#4f6370">
+<div class="article" data-category="" style="--tx-post-bg:#FFFAF0;--tx-post-text:#1e3e3f;--tx-cat-bg:#eef2f7;--tx-cat-text:#4f6370">
     <div>
         <h1>about</h1>
     </div>
@@ -189,15 +194,17 @@
     </div>
     
     <div class="content" v-pre>
-        <p>Weclcome!</p>
-<p>欢迎，我的名字叫Kyomu夜月。</p>
-<p>关于名字:<br>这是我OC的名字，干脆拿来用了</p>
-<p>关于成分:<br>1.个人博客博主一枚主要写一写生活感想，技术，娱乐<br>2.喜欢二次元，平时爱看番，听音乐，周边很少买<br>3.目前正用AI学习编程</p>
-<p>Thank You For Coming!</p>
-
+        <h1 id="Weclcome"><a href="#Weclcome" class="headerlink" title="Weclcome!"></a>Weclcome!</h1><p>欢迎，我的名字叫Kyomu夜月。</p>
+<h2 id="关于名字"><a href="#关于名字" class="headerlink" title="关于名字:"></a>关于名字:</h2><p>这是我OC的名字，干脆拿来用了</p>
+<h2 id="关于成分"><a href="#关于成分" class="headerlink" title="关于成分:"></a>关于成分:</h2><p>1.个人博客博主一枚主要写一写生活感想，技术，娱乐<br>2.喜欢二次元，平时爱看番，听音乐，周边很少买<br>3.目前正用AI学习编程</p>
+<h1 id="Thank-You-For-Coming"><a href="#Thank-You-For-Coming" class="headerlink" title="Thank You For Coming!"></a>Thank You For Coming!</h1>
     </div>
     
     
+    
+    <div id="comment">
+        <div id="gitalk-container"></div>
+    </div>
     
     
     
@@ -232,6 +239,20 @@
     <script src="/project/js/main.js"></script>
     
     
+
+<script>
+    const gitalk = new Gitalk({
+        clientID: "",
+        clientSecret: "",
+        repo: "",
+        owner: "",
+        admin: "".split(","),
+        language: "",
+        id: location.pathname,
+        
+    })
+    gitalk.render("gitalk-container");
+</script>
 
 
 
