@@ -1,5 +1,5 @@
-https://kyomu-dong39.github.io/project/posts/test12345/
-https://kyomu-dong39.github.io/project/posts/becfa8ad/
-https://kyomu-dong39.github.io/project/about/
-https://kyomu-dong39.github.io/project/friends/
-https://kyomu-dong39.github.io/project
+https://kyomu-dong39.github.io/posts/test12345/
+https://kyomu-dong39.github.io/posts/becfa8ad/
+https://kyomu-dong39.github.io/about/
+https://kyomu-dong39.github.io/friends/
+https://kyomu-dong39.github.io/

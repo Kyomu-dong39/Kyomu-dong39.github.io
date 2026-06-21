@@ -1297,7 +1297,7 @@ ol li {
 /* 文章背景图区域 */
 .post-header-bg {
     width: 100%;
-    height: 50vh;  /* 占页面五分之二高度 */
+    height: 70vh; 
     min-height: 250px;
     background-size: cover;
     background-position: center;
