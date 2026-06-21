@@ -176,6 +176,9 @@
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             
+
+
+
 <div class="article" data-category="" style="--tx-post-bg:#FFFAF0;--tx-post-text:#1e3e3f;--tx-cat-bg:#eef2f7;--tx-cat-text:#4f6370">
     <div>
         <h1>friends</h1>
@@ -209,18 +212,209 @@
 
             <footer id="footer">
     <div id="footer-wrap">
-        <div>
-            &copy; 2026 Made by
-            <a target="_blank" rel="noopener" href="https://github.com/dinhkarate">dinhkarate</a>
-            from <a target="_blank" rel="noopener" href="https://thatnghiep.dev">thatnghiep.dev</a>
-        </div>
-        <div>
-            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> |
-            <a target="_blank" rel="noopener" href="https://github.com/thatnghiep-dev/hexo-theme-loststar">LostStar Theme</a>
+        <!-- 上部分：四列布局 -->
+        <div class="footer-top">
+            <!-- 左侧：作者信息 -->
+            <div class="footer-section author-info">
+                <h3 class="footer-title">Kyomu夜月</h3>
+                <p class="footer-description">奇迹与魔法一定是存在的!
+</p>
+                <div class="social-icons">
+                    
+                        
+                            
+                            <a href="https://github.com/Kyomu-dong39" target="_blank" rel="noopener noreferrer" title="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        
+                            
+                            <a href="mailto:Kyomudong117@163.com" target="_blank" rel="noopener noreferrer" title="E-Mail">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        
+                    
+                </div>
+            </div>
+            
+            <!-- 中间左：快速链接 -->
+            <div class="footer-section quick-links">
+                <h4 class="footer-subtitle">QUICK LINKS</h4>
+                <ul class="footer-links">
+                    
+                        
+                            <li><a href="/project/">首页</a></li>
+                        
+                            <li><a href="/project/about">关于我</a></li>
+                        
+                            <li><a href="/project/archives">归档</a></li>
+                        
+                            <li><a href="/project/categories">分类</a></li>
+                        
+                            <li><a href="/project/tags">标签</a></li>
+                        
+                    
+                </ul>
+            </div>
+            
+            <!-- 中间右：友情链接 -->
+            <div class="footer-section friend-links">
+                <h4 class="footer-subtitle">友情链接</h4>
+                <ul class="footer-links">
+                    
+                        
+                            <li><a href="https://github.com/Kyomu-dong39" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        
+                    
+                </ul>
+            </div>
+            
+            <!-- 右侧：系统状态面板 -->
+            <div class="footer-section system-status">
+                <h4 class="footer-subtitle">系统状态</h4>
+                <div class="status-panel">
+                    <div class="status-item">
+                        <span class="status-label">CPU</span>
+                        <span class="status-value" id="footer-cpu">12%</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">内存</span>
+                        <span class="status-value" id="footer-memory">45%</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">浏览器</span>
+                        <span class="status-value" id="footer-browser">--</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">停留时间</span>
+                        <span class="status-value" id="footer-stay-time">00:00:00</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">北京时间</span>
+                        <span class="status-value" id="footer-time">--:--:--</span>
+                    </div>
+                </div>
+            </div>
         </div>
         
+        <!-- 下部分：版权信息 -->
+        <div class="footer-bottom">
+            <div class="copyright-line">
+                &copy; 2026 - 2026
+                <a href="https://Kyomu-dong39.github.io/project">Kyomu夜月的博客</a>
+                All Rights Reserved.
+            </div>
+            <div class="powered-by">
+                Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a>
+                | Theme <a href="https://github.com/thatnghiep-dev/hexo-theme-loststar" target="_blank" rel="noopener noreferrer">LostStar</a>
+            </div>
+            
+        </div>
     </div>
 </footer>
+
+<!-- 系统状态动态更新脚本（可选，如果想要动态效果请保留） -->
+<script>
+(function() {
+    // 更新时间显示（北京时间 UTC+8）
+    function updateTime() {
+        var now = new Date();
+        var timeStr = now.toLocaleTimeString('zh-CN', {
+            timeZone: 'Asia/Shanghai',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        });
+        var timeEl = document.getElementById('footer-time');
+        if (timeEl) {
+            timeEl.textContent = timeStr;
+        }
+    }
+    
+    // 模拟 CPU 和内存数据（可选）
+    function updateStatus() {
+        var cpuEl = document.getElementById('footer-cpu');
+        var memEl = document.getElementById('footer-memory');
+        if (cpuEl) {
+            cpuEl.textContent = Math.floor(Math.random() * 30 + 5) + '%';
+        }
+        if (memEl) {
+            memEl.textContent = Math.floor(Math.random() * 40 + 30) + '%';
+        }
+    }
+    
+    // 检测浏览器类型
+    function detectBrowser() {
+        var ua = navigator.userAgent;
+        var browser = '未知';
+        
+        if (ua.indexOf('Edg') !== -1) {
+            browser = 'Microsoft Edge';
+        } else if (ua.indexOf('Chrome') !== -1 && ua.indexOf('Edg') === -1) {
+            browser = 'Google Chrome';
+        } else if (ua.indexOf('Firefox') !== -1) {
+            browser = 'Mozilla Firefox';
+        } else if (ua.indexOf('Safari') !== -1 && ua.indexOf('Chrome') === -1) {
+            browser = 'Apple Safari';
+        } else if (ua.indexOf('Opera') !== -1 || ua.indexOf('OPR') !== -1) {
+            browser = 'Opera';
+        } else if (ua.indexOf('Trident') !== -1 || ua.indexOf('MSIE') !== -1) {
+            browser = 'Internet Explorer';
+        } else if (ua.indexOf('QQBrowser') !== -1) {
+            browser = 'QQ浏览器';
+        } else if (ua.indexOf('UC') !== -1) {
+            browser = 'UC浏览器';
+        } else if (ua.indexOf('XiaoMi') !== -1) {
+            browser = '小米浏览器';
+        } else if (ua.indexOf('MiuiBrowser') !== -1) {
+            browser = 'MIUI浏览器';
+        } else if (ua.indexOf('HuaweiBrowser') !== -1) {
+            browser = '华为浏览器';
+        } else if (ua.indexOf('vivo') !== -1) {
+            browser = 'vivo浏览器';
+        } else if (ua.indexOf('OPPO') !== -1) {
+            browser = 'OPPO浏览器';
+        }
+        
+        var browserEl = document.getElementById('footer-browser');
+        if (browserEl) {
+            browserEl.textContent = browser;
+        }
+    }
+    
+    // 记录页面加载时间
+    var startTime = Date.now();
+    
+    // 更新停留时间
+    function updateStayTime() {
+        var now = Date.now();
+        var diff = now - startTime;
+        
+        var hours = Math.floor(diff / (1000 * 60 * 60));
+        var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        
+        var timeStr = String(hours).padStart(2, '0') + ':' +
+                      String(minutes).padStart(2, '0') + ':' +
+                      String(seconds).padStart(2, '0');
+        
+        var stayTimeEl = document.getElementById('footer-stay-time');
+        if (stayTimeEl) {
+            stayTimeEl.textContent = timeStr;
+        }
+    }
+    
+    // 初始化
+    updateTime();
+    updateStayTime();
+    detectBrowser();
+    setInterval(updateTime, 1000);
+    setInterval(updateStayTime, 1000);
+    
+    // 如果想要动态 CPU/内存，取消下面这行的注释
+    setInterval(updateStatus, 5000);
+})();
+</script>
 
         </div>
         
@@ -253,5 +447,5 @@
 
 
     
-</body>
+<script src="/project/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>

@@ -35,6 +35,10 @@ const app = Vue.createApp({
                 else this.menuColor = false;
                 if (newScrollTop <= 400) wrap.style.top = "-" + newScrollTop / 5 + "px";
                 else wrap.style.top = "-80px";
+            } else {
+        /* 文章页面：滚动时切换菜单样式 */
+        if (newScrollTop <= window.innerHeight - 100) this.menuColor = true;
+        else this.menuColor = false;
             }
             this.scrollTop = newScrollTop;
         },
