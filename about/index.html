@@ -434,13 +434,15 @@
 
 <script>
     const gitalk = new Gitalk({
-        clientID: "",
-        clientSecret: "",
-        repo: "",
-        owner: "",
-        admin: "".split(","),
-        language: "",
+        clientID: "Ov23liCfCjcmu38x4E8Z",
+        clientSecret: "5f4538b0e5e54ee9eee153fc926880b4f9af1369",
+        repo: "Kyomu-dong39.github.io",
+        owner: "Kyomu-dong39",
+        admin: "Kyomu-dong39".split(","),
+        language: "en, zh-CN,zh-TW",
         id: location.pathname,
+        
+        proxy: "https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token",
         
     })
     gitalk.render("gitalk-container");
