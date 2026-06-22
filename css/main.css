@@ -532,6 +532,15 @@
 /* 加载页面整体背景 */
 #loading {
     background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
 }
 
 /* 加载内容容器 */
