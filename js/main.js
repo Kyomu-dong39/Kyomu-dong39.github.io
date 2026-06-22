@@ -1,20 +1,27 @@
 const app = Vue.createApp({
     mixins: Object.values(mixins),
-    data() {
-        return {
-            loading: true,
-            hiddenMenu: false,
-            showMenuItems: false,
-            menuColor: false,
-            scrollTop: 0,
-            renderers: [],
-        };
-    },
-    created() {
-        window.addEventListener("load", () => {
-            this.loading = false;
-        });
-    },
+data() {
+    return {
+        loading: true,
+        loadingPercent: 0,  
+        hiddenMenu: false,
+        showMenuItems: false,
+        menuColor: false,
+        scrollTop: 0,
+        renderers: [],
+    };
+},
+created() {
+    const interval = setInterval(() => {
+        this.loadingPercent++;
+        if (this.loadingPercent >= 100) {
+            clearInterval(interval);
+            setTimeout(() => {
+                this.loading = false;
+            }, 300);
+        }
+    }, 20);
+},
     mounted() {
         window.addEventListener("scroll", this.handleScroll, true);
         this.render();

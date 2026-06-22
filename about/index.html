@@ -75,13 +75,18 @@
 <body>
     <div id="layout">
         <transition name="fade">
-            <div id="loading" v-show="loading">
-                <div id="loading-circle">
-                    <h2>LOADING</h2>
-                    <p>请稍等...</p>
-                    <img src="/images/loading.gif" />
-                </div>
-            </div>
+           <div id="loading" v-show="loading">
+    <div id="loading-content">
+        <h1>
+            <span class="loading-title-gray">Kyomu</span>
+            <span class="loading-title-black">夜月</span>
+        </h1>
+        <div class="loading-bar-container">
+            <div class="loading-bar" :style="{width: loadingPercent + '%'}"></div>
+        </div>
+        <p class="loading-percent">{{ loadingPercent }}% LOADING...</p>
+    </div>
+</div>
         </transition>
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">

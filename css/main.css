@@ -529,40 +529,49 @@
 #footer #footer-wrap {
   box-sizing: border-box;
 }
+/* 加载页面整体背景 */
 #loading {
-  align-items: center;
-  background: #fffdfa;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  word-break: keep-all;
-  z-index: 2147483647;
+    background-color: #ffffff;
 }
-#loading h2,
-#loading p,
-#loading img {
-  margin: 10px;
+
+/* 加载内容容器 */
+#loading-content {
+    text-align: center;
 }
-#loading img {
-  border-radius: 0;
-  height: 50px;
+
+/* "Kyomu" 灰色字体 */
+.loading-title-gray {
+    color: #666666;
+    font-size: 48px;
 }
-#loading-circle {
-  align-items: center;
-  border: 10px solid #a3ddfb;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  height: 50vmin;
-  justify-content: center;
-  padding: 50px;
-  text-align: center;
-  width: 50vmin;
+
+/* "夜月" 黑色字体 */
+.loading-title-black {
+    color: #000000;
+    font-size: 48px;
+}
+
+/* 进度条容器 */
+.loading-bar-container {
+    width: 200px;
+    height: 4px;
+    background-color: #eeeeee;
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+/* 进度条 */
+.loading-bar {
+    height: 100%;
+    background-color: #000000;
+    border-radius: 2px;
+    transition: width 0.1s ease;
+}
+
+/* 百分比文字 */
+.loading-percent {
+    color: #666666;
+    font-size: 14px;
 }
 #main {
   margin-right: calc(100% - 100vw);
