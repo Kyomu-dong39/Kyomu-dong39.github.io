@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<html lang="ch-ZN">
+<head>
+    <meta charset="utf-8" />
+    <title>tags | Kyomu夜月的博客</title>
+    <meta name="author" content="Kyomu夜月" />
+
+    <meta name="keywords" content="Kyomu夜月,tech,life" />
+    <link rel="canonical" href="https://kyomu-dong39.github.io/tags/" />
+    <meta name="description" content="你好，欢迎来到Kyomu夜月的博客!">
+<meta property="og:type" content="website">
+<meta property="og:title" content="tags">
+<meta property="og:url" content="https://kyomu-dong39.github.io/tags/">
+<meta property="og:site_name" content="Kyomu夜月的博客">
+<meta property="og:description" content="你好，欢迎来到Kyomu夜月的博客!">
+<meta property="og:locale" content="ch_ZN">
+<meta property="og:image" content="https://kyomu-dong39.github.io/images/avatar.gif">
+<meta property="article:published_time" content="2026-06-22T03:24:57.530Z">
+<meta property="article:modified_time" content="2026-06-22T03:24:57.530Z">
+<meta property="article:author" content="Kyomu夜月">
+<meta property="article:tag" content="Kyomu夜月,tech,life">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://kyomu-dong39.github.io/images/avatar.gif">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.38/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+<script src="/js/lib/stars.js"></script>
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+<meta name="generator" content="Hexo 7.3.0"></head>
+<script src="/js/back-to-top.js"></script>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>请稍等...</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>KYOMU夜月的博客</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;KYOMU夜月的博客</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div id="archives">
+    
+    
+    <div class="categories-tags">
+        
+        
+        <span>
+            <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="background: #eef2f7; color: #4f6370">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                博客
+            </a>
+        </span>
+        
+        
+    </div>
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <!-- 上部分：四列布局 -->
+        <div class="footer-top">
+            <!-- 左侧：作者信息 -->
+            <div class="footer-section author-info">
+                <h3 class="footer-title">Kyomu夜月</h3>
+                <p class="footer-description">奇迹与魔法一定是存在的!
+</p>
+                <div class="social-icons">
+                    
+                        
+                            
+                            <a href="https://github.com/Kyomu-dong39" target="_blank" rel="noopener noreferrer" title="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        
+                            
+                            <a href="mailto:Kyomudong117@163.com" target="_blank" rel="noopener noreferrer" title="E-Mail">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        
+                    
+                </div>
+            </div>
+            
+            <!-- 中间左：快速链接 -->
+            <div class="footer-section quick-links">
+                <h4 class="footer-subtitle">QUICK LINKS</h4>
+                <ul class="footer-links">
+                    
+                        
+                            <li><a href="/">首页</a></li>
+                        
+                            <li><a href="/about">关于我</a></li>
+                        
+                            <li><a href="/archives">归档</a></li>
+                        
+                            <li><a href="/categories">分类</a></li>
+                        
+                            <li><a href="/tags">标签</a></li>
+                        
+                    
+                </ul>
+            </div>
+            
+            <!-- 中间右：友情链接 -->
+            <div class="footer-section friend-links">
+                <h4 class="footer-subtitle">友情链接</h4>
+                <ul class="footer-links">
+                    
+                        
+                            <li><a href="https://github.com/Kyomu-dong39" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        
+                    
+                </ul>
+            </div>
+            
+            <!-- 右侧：系统状态面板 -->
+            <div class="footer-section system-status">
+                <h4 class="footer-subtitle">系统状态</h4>
+                <div class="status-panel">
+                    <div class="status-item">
+                        <span class="status-label">CPU</span>
+                        <span class="status-value" id="footer-cpu">12%</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">内存</span>
+                        <span class="status-value" id="footer-memory">45%</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">浏览器</span>
+                        <span class="status-value" id="footer-browser">--</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">停留时间</span>
+                        <span class="status-value" id="footer-stay-time">00:00:00</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">北京时间</span>
+                        <span class="status-value" id="footer-time">--:--:--</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 下部分：版权信息 -->
+        <div class="footer-bottom">
+            <div class="copyright-line">
+                &copy; 2026 - 2026
+                <a href="https://Kyomu-dong39.github.io">Kyomu夜月的博客</a>
+                All Rights Reserved.
+            </div>
+            <div class="powered-by">
+                Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a>
+                | Theme <a href="https://github.com/thatnghiep-dev/hexo-theme-loststar" target="_blank" rel="noopener noreferrer">LostStar</a>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+<!-- 系统状态动态更新脚本（可选，如果想要动态效果请保留） -->
+<script>
+(function() {
+    // 更新时间显示（北京时间 UTC+8）
+    function updateTime() {
+        var now = new Date();
+        var timeStr = now.toLocaleTimeString('zh-CN', {
+            timeZone: 'Asia/Shanghai',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        });
+        var timeEl = document.getElementById('footer-time');
+        if (timeEl) {
+            timeEl.textContent = timeStr;
+        }
+    }
+    
+    // 模拟 CPU 和内存数据（可选）
+    function updateStatus() {
+        var cpuEl = document.getElementById('footer-cpu');
+        var memEl = document.getElementById('footer-memory');
+        if (cpuEl) {
+            cpuEl.textContent = Math.floor(Math.random() * 30 + 5) + '%';
+        }
+        if (memEl) {
+            memEl.textContent = Math.floor(Math.random() * 40 + 30) + '%';
+        }
+    }
+    
+    // 检测浏览器类型
+    function detectBrowser() {
+        var ua = navigator.userAgent;
+        var browser = '未知';
+        
+        if (ua.indexOf('Edg') !== -1) {
+            browser = 'Microsoft Edge';
+        } else if (ua.indexOf('Chrome') !== -1 && ua.indexOf('Edg') === -1) {
+            browser = 'Google Chrome';
+        } else if (ua.indexOf('Firefox') !== -1) {
+            browser = 'Mozilla Firefox';
+        } else if (ua.indexOf('Safari') !== -1 && ua.indexOf('Chrome') === -1) {
+            browser = 'Apple Safari';
+        } else if (ua.indexOf('Opera') !== -1 || ua.indexOf('OPR') !== -1) {
+            browser = 'Opera';
+        } else if (ua.indexOf('Trident') !== -1 || ua.indexOf('MSIE') !== -1) {
+            browser = 'Internet Explorer';
+        } else if (ua.indexOf('QQBrowser') !== -1) {
+            browser = 'QQ浏览器';
+        } else if (ua.indexOf('UC') !== -1) {
+            browser = 'UC浏览器';
+        } else if (ua.indexOf('XiaoMi') !== -1) {
+            browser = '小米浏览器';
+        } else if (ua.indexOf('MiuiBrowser') !== -1) {
+            browser = 'MIUI浏览器';
+        } else if (ua.indexOf('HuaweiBrowser') !== -1) {
+            browser = '华为浏览器';
+        } else if (ua.indexOf('vivo') !== -1) {
+            browser = 'vivo浏览器';
+        } else if (ua.indexOf('OPPO') !== -1) {
+            browser = 'OPPO浏览器';
+        }
+        
+        var browserEl = document.getElementById('footer-browser');
+        if (browserEl) {
+            browserEl.textContent = browser;
+        }
+    }
+    
+    // 记录页面加载时间
+    var startTime = Date.now();
+    
+    // 更新停留时间
+    function updateStayTime() {
+        var now = Date.now();
+        var diff = now - startTime;
+        
+        var hours = Math.floor(diff / (1000 * 60 * 60));
+        var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        
+        var timeStr = String(hours).padStart(2, '0') + ':' +
+                      String(minutes).padStart(2, '0') + ':' +
+                      String(seconds).padStart(2, '0');
+        
+        var stayTimeEl = document.getElementById('footer-stay-time');
+        if (stayTimeEl) {
+            stayTimeEl.textContent = timeStr;
+        }
+    }
+    
+    // 初始化
+    updateTime();
+    updateStayTime();
+    detectBrowser();
+    setInterval(updateTime, 1000);
+    setInterval(updateStayTime, 1000);
+    
+    // 如果想要动态 CPU/内存，取消下面这行的注释
+    setInterval(updateStatus, 5000);
+})();
+</script>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
