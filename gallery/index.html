@@ -71,10 +71,14 @@
     <div id="layout">
         <transition name="fade">
             <div id="loading" v-show="loading">
-                <div id="loading-circle">
-                    <h2>LOADING</h2>
-                    <p>请稍候...</p>
-                    <img src="/images/loading.gif" />
+                <div id="loading-content">
+                    <h1 class="loading-title">
+                        <span class="loading-title-white">Kyomu</span><span class="loading-title-gray">夜月</span>
+                    </h1>
+                    <div class="loading-bar-container">
+                        <div class="loading-bar" id="loading-bar"></div>
+                    </div>
+                    <div class="loading-percent"><span id="loading-percent-num">0</span>% LOADING...</div>
                 </div>
             </div>
         </transition>

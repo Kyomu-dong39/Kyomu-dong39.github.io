@@ -3,6 +3,7 @@ const app = Vue.createApp({
     data() {
         return {
             loading: true,
+            progress: 0,
             hiddenMenu: false,
             showMenuItems: false,
             menuColor: false,
@@ -11,8 +12,9 @@ const app = Vue.createApp({
         };
     },
     created() {
+        this.startLoading();
         window.addEventListener("load", () => {
-            this.loading = false;
+            this.finishLoading();
         });
     },
     mounted() {
@@ -20,6 +22,34 @@ const app = Vue.createApp({
         this.render();
     },
     methods: {
+        startLoading() {
+            this.progress = 0;
+            this.updateProgress();
+            this._loadTimer = setInterval(() => {
+                if (this.progress < 90) {
+                    this.progress += Math.random() * 8 + 2;
+                    if (this.progress > 90) this.progress = 90;
+                    this.updateProgress();
+                }
+            }, 200);
+        },
+        updateProgress() {
+            const bar = document.getElementById("loading-bar");
+            const num = document.getElementById("loading-percent-num");
+            if (bar) bar.style.width = this.progress + "%";
+            if (num) num.textContent = Math.floor(this.progress);
+        },
+        finishLoading() {
+            if (this._loadTimer) {
+                clearInterval(this._loadTimer);
+                this._loadTimer = null;
+            }
+            this.progress = 100;
+            this.updateProgress();
+            setTimeout(() => {
+                this.loading = false;
+            }, 450);
+        },
         render() {
             for (let i of this.renderers) i();
         },

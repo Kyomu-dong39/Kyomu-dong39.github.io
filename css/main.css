@@ -536,7 +536,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
+    background-color: #000000;
     z-index: 9999;
     display: flex;
     justify-content: center;
@@ -547,39 +547,49 @@
 #loading-content {
     text-align: center;
 }
-/* "Kyomu" 灰色字体 */
+
+/* 标题：衬线字体 */
+.loading-title {
+    font-family: Georgia, "Times New Roman", "Songti SC", serif;
+    font-weight: 600;
+    font-size: 56px;
+    letter-spacing: 1px;
+    margin: 0 0 26px 0;
+}
+
+/* "Kyomu" 白色字体 */
+.loading-title-white {
+    color: #ffffff;
+}
+
+/* "夜月" 灰色字体 */
 .loading-title-gray {
-    color: #666666;
-    font-size: 48px;
+    color: #8a8a8a;
 }
 
-/* "夜月" 黑色字体 */
-.loading-title-black {
-    color: #000000;
-    font-size: 48px;
-}
-
-/* 进度条容器 */
+/* 进度条容器（极简细线） */
 .loading-bar-container {
-    width: 200px;
-    height: 4px;
-    background-color: #eeeeee;
-    margin: 20px auto;
-    border-radius: 2px;
+    width: 220px;
+    height: 2px;
+    background-color: #333333;
+    margin: 0 auto 14px auto;
+    overflow: hidden;
 }
 
 /* 进度条 */
 .loading-bar {
     height: 100%;
-    background-color: #000000;
-    border-radius: 2px;
-    transition: width 0.1s ease;
+    width: 0%;
+    background-color: #cccccc;
+    transition: width 0.15s ease;
 }
 
 /* 百分比文字 */
 .loading-percent {
-    color: #666666;
-    font-size: 14px;
+    color: #888888;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-family: "Courier New", monospace;
 }
 #main {
   margin-right: calc(100% - 100vw);
